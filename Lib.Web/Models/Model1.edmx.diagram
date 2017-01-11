@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6cc1729fc376417a9181b5212d2a5d0e" Name="Diagram1">
+        <EntityTypeShape EntityType="Models.Author" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Book" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Country" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Genre" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Interpreter" Width="1.5" PointX="5.25" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Language" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Publisher" Width="1.5" PointX="5.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Series" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Models.Tag" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
+        <AssociationConnector Association="Models.FK__Books__CoutryId__1FCDBCEB" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK__Books__LanguageI__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.FK__Books__SeriesId__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.AuthorsGenres" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.BooksAuthors" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.BooksGenres" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.BooksInterpreters" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.BooksPublishers" ManuallyRouted="false" />
+        <AssociationConnector Association="Models.BooksTags" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

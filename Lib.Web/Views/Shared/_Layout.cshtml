@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/flags.css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/ErrorStyles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        function changeLang(language) {
+            $.ajax({
+                type: "POST",
+                url: "/Home/ChangeCulture",
+                data: { lang: language },
+                success: successFunc,
+                error: errorFunc
+            });
+
+            function successFunc(data, status) {
+                if (status === 'success') {
+                    location.reload();
+                }
+            }
+
+            function errorFunc() {
+                alert('error');
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse" role="navigation">
+        <a class="navbar-brand" href="#">Free Lib application</a>
+        @Html.Partial("_LoginPartial")
+        <div style="float: right">
+            <img src="~/Content/blank.png" title="English" class="flag flag-en" onclick="changeLang('en')" alt="English" />
+            <img src="~/Content/blank.png" title="Русский" class="flag flag-ru" onclick="changeLang('ru')" alt="Русский" />
+            <img src="~/Content/blank.png" title="Українськa" class="flag flag-ua" onclick="changeLang('ua')" alt="Українська" />
+        </div>
+    </div>
+
+    <div class="row panel">
+        <div id="categories" class="col-xs-3">
+            Left bar
+        </div>
+        <div class="col-xs-8">
+            @RenderBody()
+
+        </div>
+
+    </div>
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - Free Lib Application</p>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

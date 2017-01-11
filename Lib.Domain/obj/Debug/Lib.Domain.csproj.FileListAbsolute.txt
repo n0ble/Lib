@@ -1,0 +1,35 @@
+D:\Dev\MyProjects\Lib\Lib.Domain\bin\Debug\Lib.Domain.dll
+D:\Dev\MyProjects\Lib\Lib.Domain\bin\Debug\Lib.Domain.pdb
+D:\Dev\MyProjects\Lib\Lib.Domain\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Dev\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.Helpers.dll
+D:\Dev\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.Mvc.dll
+D:\Dev\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.Razor.dll
+D:\Dev\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Dev\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.WebPages.dll
+D:\Dev\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Dev\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.Helpers.xml
+D:\Dev\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.Mvc.xml
+D:\Dev\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.Razor.xml
+D:\Dev\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.WebPages.xml
+D:\Dev\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Dev\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Dev\MyProjects\Lib\Lib.Domain\obj\Debug\Lib.Domain.dll
+D:\Dev\MyProjects\Lib\Lib.Domain\obj\Debug\Lib.Domain.pdb
+D:\Self Education\Projects\MyProjects\Lib\Lib.Domain\bin\Debug\Lib.Domain.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Domain\bin\Debug\Lib.Domain.pdb
+D:\Self Education\Projects\MyProjects\Lib\Lib.Domain\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.Helpers.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.Mvc.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.Razor.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.WebPages.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.Helpers.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.Mvc.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.Razor.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.WebPages.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Domain\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Domain\obj\Debug\Lib.Domain.csprojResolveAssemblyReference.cache
+D:\Self Education\Projects\MyProjects\Lib\Lib.Domain\obj\Debug\Lib.Domain.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Domain\obj\Debug\Lib.Domain.pdb

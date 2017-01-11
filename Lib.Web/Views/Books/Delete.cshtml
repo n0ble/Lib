@@ -1,0 +1,104 @@
+﻿@model Lib.Web.Models.Book
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Book</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Annotation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Annotation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PagesNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PagesNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PublishedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PublishedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TranslatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TranslatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReleasedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReleasedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Country.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Country.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Language.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Language.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Series.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Series.Name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

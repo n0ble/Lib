@@ -1,0 +1,81 @@
+﻿@model Lib.Web.Models.ViewModels.BooksListViewModel
+
+@{
+    ViewBag.Title = "Admin panel: list of books";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/lib.css" rel="stylesheet" />
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3>List of books</h3>
+    </div>
+    <div class="panel-body">
+
+        @foreach (var item in Model.Books)
+        {
+            var authors = string.Join(",", @item.Authors);
+            <div class="well">
+                <h3>
+                    <strong>
+                        @Html.ActionLink(@item.Name, "Details", new { id = item.ISBN })
+                    </strong>
+                </h3>
+                <div class="pull-left">
+                    <span class="lead">@item.Annotation</span>
+                </div>
+                <div class="actions pull-right">
+                    <div class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+                            Actions
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-header">General</li>
+                            <li>@Html.ActionLink("Edit", "Edit", new { id = item.ISBN })</li>
+                            <li>@Html.ActionLink("Details", "Details", new { id = item.ISBN })</li>
+                            <li>@Html.ActionLink("Delete", "Delete", new { id = item.ISBN })</li>
+                            <li class="divider"></li>
+                            <li class="dropdown-header">Custom</li>
+                            <li><a href="#">About Us</a></li>
+                            <li>@Html.ActionLink("Download", "DownloadFile", new { id = item.ISBN })</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix" ></div>
+            </div>
+        }
+        <div>
+            @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index", new { page = x }))
+        </div>
+    </div>
+    <div class="panel-footer">
+        @Html.ActionLink("Add book", "Create", null,
+            new { @class = "btn btn-default" })
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $("#DownloadFile").click(function () {
+                $.ajax(
+                {
+                    url: '@Url.Action("DownloadFile", "Books")',
+                    contentType: 'application/json; charset=utf-8',
+                    datatype: 'json',
+                    data: {
+                        id: $("#DownloadFile").attr("id")
+            },
+                type: "GET",
+                success: function () {
+                    alert("success");
+                }
+            });
+
+        });
+    });
+</script>

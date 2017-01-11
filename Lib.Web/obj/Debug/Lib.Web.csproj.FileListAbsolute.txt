@@ -1,0 +1,171 @@
+D:\Dev\MyProjects\Lib\Lib.Web\bin\roslyn\csc.exe
+D:\Dev\MyProjects\Lib\Lib.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Dev\MyProjects\Lib\Lib.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Dev\MyProjects\Lib\Lib.Web\bin\roslyn\System.Collections.Immutable.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\roslyn\System.Reflection.Metadata.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\roslyn\vbc.exe
+D:\Dev\MyProjects\Lib\Lib.Web\bin\roslyn\VBCSCompiler.exe
+D:\Dev\MyProjects\Lib\Lib.Web\bin\roslyn\VBCSCompiler.exe.config
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Lib.Web.dll.config
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Lib.Web.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Lib.Web.pdb
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Antlr3.Runtime.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\EntityFramework.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\EntityFramework.SqlServer.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Lib.Domain.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.Google.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Moq.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Newtonsoft.Json.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Ninject.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Ninject.Web.Common.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Ninject.Web.Mvc.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Owin.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\System.Web.Helpers.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\System.Web.Mvc.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\System.Web.Optimization.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\System.Web.Razor.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\System.Web.WebPages.Deployment.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\System.Web.WebPages.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\System.Web.WebPages.Razor.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\WebActivator.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\WebGrease.dll
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Lib.Domain.pdb
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Moq.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Ninject.pdb
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Ninject.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Ninject.Web.Common.pdb
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Ninject.Web.Common.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Ninject.Web.Mvc.pdb
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Ninject.Web.Mvc.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\System.Web.Helpers.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\System.Web.Mvc.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\System.Web.Optimization.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\System.Web.Razor.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\System.Web.WebPages.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\System.Web.WebPages.Deployment.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\System.Web.WebPages.Razor.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Antlr3.Runtime.pdb
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Newtonsoft.Json.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\EntityFramework.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\EntityFramework.SqlServer.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.Google.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Dev\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Dev\MyProjects\Lib\Lib.Web\obj\Debug\Lib.Web.csprojResolveAssemblyReference.cache
+D:\Dev\MyProjects\Lib\Lib.Web\obj\Debug\Lib.Web.dll
+D:\Dev\MyProjects\Lib\Lib.Web\obj\Debug\Lib.Web.pdb
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\roslyn\csc.exe
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\roslyn\System.Collections.Immutable.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\roslyn\System.Reflection.Metadata.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\roslyn\vbc.exe
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\roslyn\VBCSCompiler.exe
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\roslyn\VBCSCompiler.exe.config
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Lib.Web.dll.config
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Lib.Web.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Lib.Web.pdb
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\ru\Lib.Web.resources.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Antlr3.Runtime.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\EntityFramework.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\EntityFramework.SqlServer.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Lib.Domain.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.Google.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.Web.Infrastructure.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Moq.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Newtonsoft.Json.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Ninject.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Ninject.Web.Common.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Ninject.Web.Mvc.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Owin.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\System.Web.Helpers.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\System.Web.Mvc.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\System.Web.Optimization.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\System.Web.Razor.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\System.Web.WebPages.Deployment.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\System.Web.WebPages.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\System.Web.WebPages.Razor.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\WebActivator.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\WebGrease.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Lib.Domain.pdb
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Moq.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Ninject.pdb
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Ninject.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Ninject.Web.Common.pdb
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Ninject.Web.Common.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Ninject.Web.Mvc.pdb
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Ninject.Web.Mvc.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\System.Web.Helpers.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\System.Web.Mvc.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\System.Web.Optimization.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\System.Web.Razor.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\System.Web.WebPages.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\System.Web.WebPages.Deployment.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\System.Web.WebPages.Razor.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Antlr3.Runtime.pdb
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Newtonsoft.Json.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\EntityFramework.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\EntityFramework.SqlServer.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.Google.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\obj\Debug\Lib.Web.csprojResolveAssemblyReference.cache
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\obj\Debug\Lib.Web.Resources.Resource.resources
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\obj\Debug\Lib.Web.Resources.Resource.ru.resources
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\obj\Debug\Lib.Web.csproj.GenerateResource.Cache
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\obj\Debug\ru\Lib.Web.resources.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\obj\Debug\Lib.Web.dll
+D:\Self Education\Projects\MyProjects\Lib\Lib.Web\obj\Debug\Lib.Web.pdb

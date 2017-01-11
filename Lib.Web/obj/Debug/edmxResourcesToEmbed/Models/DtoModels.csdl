@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DtoModels" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Author">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+    <Property Name="Biography" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Genres" Relationship="Self.AuthorsGenres" FromRole="Authors" ToRole="Genres" />
+    <NavigationProperty Name="Books" Relationship="Self.BooksAuthors" FromRole="Authors" ToRole="Books" />
+  </EntityType>
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="ISBN" />
+    </Key>
+    <Property Name="ISBN" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Annotation" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Rating" Type="Int16" />
+    <Property Name="SeriesId" Type="Guid" />
+    <Property Name="PagesNumber" Type="Int16" />
+    <Property Name="PublishedOn" Type="DateTime" Precision="3" />
+    <Property Name="TranslatedOn" Type="DateTime" Precision="3" />
+    <Property Name="ReleasedOn" Type="DateTime" Precision="3" />
+    <Property Name="LanguageId" Type="Guid" />
+    <Property Name="CoutryId" Type="Guid" />
+    <NavigationProperty Name="Country" Relationship="Self.FK__Books__CoutryId__1FCDBCEB" FromRole="Books" ToRole="Countries" />
+    <NavigationProperty Name="Language" Relationship="Self.FK__Books__LanguageI__1ED998B2" FromRole="Books" ToRole="Languages" />
+    <NavigationProperty Name="Series" Relationship="Self.FK__Books__SeriesId__1DE57479" FromRole="Books" ToRole="Series" />
+    <NavigationProperty Name="Authors" Relationship="Self.BooksAuthors" FromRole="Books" ToRole="Authors" />
+    <NavigationProperty Name="Genres" Relationship="Self.BooksGenres" FromRole="Books" ToRole="Genres" />
+    <NavigationProperty Name="Interpreters" Relationship="Self.BooksInterpreters" FromRole="Books" ToRole="Interpreters" />
+    <NavigationProperty Name="Publishers" Relationship="Self.BooksPublishers" FromRole="Books" ToRole="Publishers" />
+    <NavigationProperty Name="Tags" Relationship="Self.BooksTags" FromRole="Books" ToRole="Tags" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Books" Relationship="Self.FK__Books__CoutryId__1FCDBCEB" FromRole="Countries" ToRole="Books" />
+  </EntityType>
+  <EntityType Name="Genre">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Authors" Relationship="Self.AuthorsGenres" FromRole="Genres" ToRole="Authors" />
+    <NavigationProperty Name="Books" Relationship="Self.BooksGenres" FromRole="Genres" ToRole="Books" />
+  </EntityType>
+  <EntityType Name="Interpreter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Books" Relationship="Self.BooksInterpreters" FromRole="Interpreters" ToRole="Books" />
+  </EntityType>
+  <EntityType Name="Language">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Books" Relationship="Self.FK__Books__LanguageI__1ED998B2" FromRole="Languages" ToRole="Books" />
+  </EntityType>
+  <EntityType Name="Publisher">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Books" Relationship="Self.BooksPublishers" FromRole="Publishers" ToRole="Books" />
+  </EntityType>
+  <EntityType Name="Series">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Books" Relationship="Self.FK__Books__SeriesId__1DE57479" FromRole="Series" ToRole="Books" />
+  </EntityType>
+  <EntityType Name="Tag">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Guid" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Books" Relationship="Self.BooksTags" FromRole="Tags" ToRole="Books" />
+  </EntityType>
+  <Association Name="FK__Books__CoutryId__1FCDBCEB">
+    <End Role="Countries" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="Books" Type="Self.Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Countries">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Books">
+        <PropertyRef Name="CoutryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Books__LanguageI__1ED998B2">
+    <End Role="Languages" Type="Self.Language" Multiplicity="0..1" />
+    <End Role="Books" Type="Self.Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Languages">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Books">
+        <PropertyRef Name="LanguageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Books__SeriesId__1DE57479">
+    <End Role="Series" Type="Self.Series" Multiplicity="0..1" />
+    <End Role="Books" Type="Self.Book" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Series">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Books">
+        <PropertyRef Name="SeriesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuthorsGenres">
+    <End Role="Authors" Type="Self.Author" Multiplicity="*" />
+    <End Role="Genres" Type="Self.Genre" Multiplicity="*" />
+  </Association>
+  <Association Name="BooksAuthors">
+    <End Role="Authors" Type="Self.Author" Multiplicity="*" />
+    <End Role="Books" Type="Self.Book" Multiplicity="*" />
+  </Association>
+  <Association Name="BooksGenres">
+    <End Role="Books" Type="Self.Book" Multiplicity="*" />
+    <End Role="Genres" Type="Self.Genre" Multiplicity="*" />
+  </Association>
+  <Association Name="BooksInterpreters">
+    <End Role="Books" Type="Self.Book" Multiplicity="*" />
+    <End Role="Interpreters" Type="Self.Interpreter" Multiplicity="*" />
+  </Association>
+  <Association Name="BooksPublishers">
+    <End Role="Books" Type="Self.Book" Multiplicity="*" />
+    <End Role="Publishers" Type="Self.Publisher" Multiplicity="*" />
+  </Association>
+  <Association Name="BooksTags">
+    <End Role="Books" Type="Self.Book" Multiplicity="*" />
+    <End Role="Tags" Type="Self.Tag" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Authors" EntityType="Self.Author" />
+    <EntitySet Name="Books" EntityType="Self.Book" />
+    <EntitySet Name="Countries" EntityType="Self.Country" />
+    <EntitySet Name="Genres" EntityType="Self.Genre" />
+    <EntitySet Name="Interpreters" EntityType="Self.Interpreter" />
+    <EntitySet Name="Languages" EntityType="Self.Language" />
+    <EntitySet Name="Publishers" EntityType="Self.Publisher" />
+    <EntitySet Name="Series" EntityType="Self.Series" />
+    <EntitySet Name="Tags" EntityType="Self.Tag" />
+    <AssociationSet Name="FK__Books__CoutryId__1FCDBCEB" Association="Self.FK__Books__CoutryId__1FCDBCEB">
+      <End Role="Countries" EntitySet="Countries" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Books__LanguageI__1ED998B2" Association="Self.FK__Books__LanguageI__1ED998B2">
+      <End Role="Languages" EntitySet="Languages" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Books__SeriesId__1DE57479" Association="Self.FK__Books__SeriesId__1DE57479">
+      <End Role="Series" EntitySet="Series" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="AuthorsGenres" Association="Self.AuthorsGenres">
+      <End Role="Authors" EntitySet="Authors" />
+      <End Role="Genres" EntitySet="Genres" />
+    </AssociationSet>
+    <AssociationSet Name="BooksAuthors" Association="Self.BooksAuthors">
+      <End Role="Authors" EntitySet="Authors" />
+      <End Role="Books" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="BooksGenres" Association="Self.BooksGenres">
+      <End Role="Books" EntitySet="Books" />
+      <End Role="Genres" EntitySet="Genres" />
+    </AssociationSet>
+    <AssociationSet Name="BooksInterpreters" Association="Self.BooksInterpreters">
+      <End Role="Books" EntitySet="Books" />
+      <End Role="Interpreters" EntitySet="Interpreters" />
+    </AssociationSet>
+    <AssociationSet Name="BooksPublishers" Association="Self.BooksPublishers">
+      <End Role="Books" EntitySet="Books" />
+      <End Role="Publishers" EntitySet="Publishers" />
+    </AssociationSet>
+    <AssociationSet Name="BooksTags" Association="Self.BooksTags">
+      <End Role="Books" EntitySet="Books" />
+      <End Role="Tags" EntitySet="Tags" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

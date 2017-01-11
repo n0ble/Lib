@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelsStoreContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Authors">
+      <EntityTypeMapping TypeName="Models.Author">
+        <MappingFragment StoreEntitySet="Authors">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Biography" ColumnName="Biography" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Books">
+      <EntityTypeMapping TypeName="Models.Book">
+        <MappingFragment StoreEntitySet="Books">
+          <ScalarProperty Name="ISBN" ColumnName="ISBN" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Annotation" ColumnName="Annotation" />
+          <ScalarProperty Name="Rating" ColumnName="Rating" />
+          <ScalarProperty Name="SeriesId" ColumnName="SeriesId" />
+          <ScalarProperty Name="PagesNumber" ColumnName="PagesNumber" />
+          <ScalarProperty Name="PublishedOn" ColumnName="PublishedOn" />
+          <ScalarProperty Name="TranslatedOn" ColumnName="TranslatedOn" />
+          <ScalarProperty Name="ReleasedOn" ColumnName="ReleasedOn" />
+          <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+          <ScalarProperty Name="CoutryId" ColumnName="CoutryId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="Models.Country">
+        <MappingFragment StoreEntitySet="Countries">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genres">
+      <EntityTypeMapping TypeName="Models.Genre">
+        <MappingFragment StoreEntitySet="Genres">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Interpreters">
+      <EntityTypeMapping TypeName="Models.Interpreter">
+        <MappingFragment StoreEntitySet="Interpreters">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Languages">
+      <EntityTypeMapping TypeName="Models.Language">
+        <MappingFragment StoreEntitySet="Languages">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Publishers">
+      <EntityTypeMapping TypeName="Models.Publisher">
+        <MappingFragment StoreEntitySet="Publishers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Series">
+      <EntityTypeMapping TypeName="Models.Series">
+        <MappingFragment StoreEntitySet="Series">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tags">
+      <EntityTypeMapping TypeName="Models.Tag">
+        <MappingFragment StoreEntitySet="Tags">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AuthorsGenres" TypeName="Models.AuthorsGenres" StoreEntitySet="AuthorsGenres">
+      <EndProperty Name="Authors">
+        <ScalarProperty Name="Id" ColumnName="Authors_Id" />
+      </EndProperty>
+      <EndProperty Name="Genres">
+        <ScalarProperty Name="Id" ColumnName="Genres_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="BooksAuthors" TypeName="Models.BooksAuthors" StoreEntitySet="BooksAuthors">
+      <EndProperty Name="Authors">
+        <ScalarProperty Name="Id" ColumnName="Authors_Id" />
+      </EndProperty>
+      <EndProperty Name="Books">
+        <ScalarProperty Name="ISBN" ColumnName="Books_ISBN" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="BooksGenres" TypeName="Models.BooksGenres" StoreEntitySet="BooksGenres">
+      <EndProperty Name="Books">
+        <ScalarProperty Name="ISBN" ColumnName="Books_ISBN" />
+      </EndProperty>
+      <EndProperty Name="Genres">
+        <ScalarProperty Name="Id" ColumnName="Genres_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="BooksInterpreters" TypeName="Models.BooksInterpreters" StoreEntitySet="BooksInterpreters">
+      <EndProperty Name="Books">
+        <ScalarProperty Name="ISBN" ColumnName="Books_ISBN" />
+      </EndProperty>
+      <EndProperty Name="Interpreters">
+        <ScalarProperty Name="Id" ColumnName="Interpreters_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="BooksPublishers" TypeName="Models.BooksPublishers" StoreEntitySet="BooksPublishers">
+      <EndProperty Name="Books">
+        <ScalarProperty Name="ISBN" ColumnName="Books_ISBN" />
+      </EndProperty>
+      <EndProperty Name="Publishers">
+        <ScalarProperty Name="Id" ColumnName="Publishers_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="BooksTags" TypeName="Models.BooksTags" StoreEntitySet="BooksTags">
+      <EndProperty Name="Books">
+        <ScalarProperty Name="ISBN" ColumnName="Books_ISBN" />
+      </EndProperty>
+      <EndProperty Name="Tags">
+        <ScalarProperty Name="Id" ColumnName="Tags_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
