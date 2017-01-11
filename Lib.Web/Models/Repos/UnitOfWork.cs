@@ -10,6 +10,7 @@ namespace Lib.Web.Models.Repos
 		private GenericRepository<Country> _countriesRepository;
 		private GenericRepository<Language> _languagessRepository;
 		private GenericRepository<Series> _seriesRepository;
+		private GenericRepository<Genre> _genresRepository;
 
 		public GenericRepository<Book> BooksRepository
 		{
@@ -73,6 +74,19 @@ namespace Lib.Web.Models.Repos
 					_tagsRepository = new GenericRepository<Tag>(context);
 				}
 				return _tagsRepository;
+			}
+		}
+
+		public GenericRepository<Genre> GenresRepository
+		{
+			get
+			{
+
+				if (_genresRepository == null)
+				{
+					_genresRepository = new GenericRepository<Genre>(context);
+				}
+				return _genresRepository;
 			}
 		}
 

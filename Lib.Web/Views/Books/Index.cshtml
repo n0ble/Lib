@@ -50,7 +50,7 @@
             </div>
         }
         <div>
-            @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index", new { page = x }))
+            @Html.PageLinks(Model.PagingInfo, x => Url.Action("Index", new { page = x, genre = Model.CurrentGenre }))
         </div>
     </div>
     <div class="panel-footer">

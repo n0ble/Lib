@@ -24,12 +24,13 @@ namespace Lib.Web.Controllers
 	    }
 
         // GET: Books
-        public ActionResult Index(int page = 1)
+        public ActionResult Index(string genre, int page = 1)
         {
 			BooksListViewModel model = new BooksListViewModel
 			{
 				Books = _repo
-				.Get(includeProperties: "Country,Language,Series")
+				.Get(includeProperties: "Country,Language,Series,Genres")
+				.Where(b => genre == null || b.Genres.Select(g => g.Name).ToList().Contains(genre))
 				.OrderBy(b => b.ISBN)
 				.Skip((page - 1) * _defaultPageSize)
 				.Take(_defaultPageSize)
@@ -39,7 +40,9 @@ namespace Lib.Web.Controllers
 					CurrentPage = page,
 					ItemsPerPage = _defaultPageSize,
 					TotalItems = _repo.Get().Count()
-				}
+				},
+				Genres = _unitOfWork.GenresRepository.Get(),
+				CurrentGenre = genre
 			};
 			return View(model);
 		}

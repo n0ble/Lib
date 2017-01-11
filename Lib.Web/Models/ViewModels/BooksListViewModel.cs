@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace Lib.Web.Models.ViewModels
 {
@@ -6,5 +7,7 @@ namespace Lib.Web.Models.ViewModels
 	{
 		public IEnumerable<Book> Books { get; set; }
 		public PagingInfo PagingInfo { get; set; }
+		public string CurrentGenre { get; set; }
+		public IEnumerable<Genre> Genres { get; set; }
 	}
 }

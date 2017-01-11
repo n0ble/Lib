@@ -199,6 +199,7 @@
     <Compile Include="Controllers\InterpretersController.cs" />
     <Compile Include="Controllers\LanguagesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NavController.cs" />
     <Compile Include="Controllers\PublishersController.cs" />
     <Compile Include="Controllers\SeriesController.cs" />
     <Compile Include="Controllers\TagsController.cs" />
@@ -464,6 +465,7 @@
     <Content Include="Views\Books\Edit.cshtml" />
     <Content Include="Views\Books\Index.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Nav\Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\Uploads\" />
