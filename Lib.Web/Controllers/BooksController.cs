@@ -5,6 +5,7 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+
 using Lib.Web.Models;
 using Lib.Web.Models.Repos;
 using Lib.Web.Models.ViewModels;
@@ -16,12 +17,15 @@ namespace Lib.Web.Controllers
         //private Entities db = new Entities();
 		private UnitOfWork _unitOfWork = new UnitOfWork();
 	    private GenericRepository<Book> _repo;
+
 		private const int _defaultPageSize = 3;
 
 	    public BooksController()
 	    {
 		    _repo = _unitOfWork.BooksRepository;
-	    }
+
+
+		}
 
         // GET: Books
         public ActionResult Index(string genre, int page = 1)
@@ -39,7 +43,7 @@ namespace Lib.Web.Controllers
 				{
 					CurrentPage = page,
 					ItemsPerPage = _defaultPageSize,
-					TotalItems = _repo.Get().Count()
+					TotalItems = genre == null ? _repo.Get().Count() : _repo.Get().Count(b => b.Genres.Select(g => g.Name).ToList().Contains(genre))
 				},
 				Genres = _unitOfWork.GenresRepository.Get(),
 				CurrentGenre = genre
@@ -61,6 +65,11 @@ namespace Lib.Web.Controllers
             {
                 return HttpNotFound();
             }
+	        ViewBag.ExistingFileFormats = _unitOfWork
+				.FileformatsRepository
+				.Get()
+				.Where(ff => ff.Books.Contains(book));
+
             return View(book);
         }
 
@@ -158,28 +167,52 @@ namespace Lib.Web.Controllers
 
 
 		[HttpPost]
-		public async Task<JsonResult> UploadFile(string id)
+		public JsonResult UploadFile(string id)
 		{
+
+			var book = _repo.GetByID(id);
+			if (book == null)
+			{
+				throw new ArgumentException("id");
+			}
+			
+
 			try
 			{
 				foreach (string file in Request.Files)
 				{
 					var fileContent = Request.Files[file];
+
 					if (fileContent != null && fileContent.ContentLength > 0)
 					{
+						var extension = Path.GetExtension(fileContent.FileName);
 						// get a stream
 						var stream = fileContent.InputStream;
 						// and optionally write the file to disk
-						var fileName = id;
+						var fileName = string.Concat(id, extension);
 						var path = Path.Combine(Server.MapPath("~/App_Data/Uploads"), fileName);
 						using (var fileStream = System.IO.File.Create(path))
 						{
 							stream.CopyTo(fileStream);
 						}
+						var tmp = _unitOfWork
+							.FileformatsRepository
+							.Get();
+
+						var fileFormat = _unitOfWork
+							.FileformatsRepository
+							.Get()
+							.FirstOrDefault(f => string.Equals(f.Name,
+											extension?.Substring(1),
+											StringComparison.InvariantCultureIgnoreCase));
+
+						book.FileFormats.Add(fileFormat);
+						_repo.Update(book);
+						_unitOfWork.Save();
 					}
 				}
 			}
-			catch (Exception)
+			catch (Exception ex)
 			{
 				Response.StatusCode = (int)HttpStatusCode.BadRequest;
 				return Json("Upload failed");

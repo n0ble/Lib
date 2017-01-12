@@ -34,5 +34,6 @@ namespace Lib.Web.Models
         public virtual DbSet<Publisher> Publishers { get; set; }
         public virtual DbSet<Series> Series { get; set; }
         public virtual DbSet<Tag> Tags { get; set; }
+        public virtual DbSet<FileFormat> FileFormats { get; set; }
     }
 }

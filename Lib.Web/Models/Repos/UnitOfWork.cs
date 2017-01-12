@@ -11,84 +11,21 @@ namespace Lib.Web.Models.Repos
 		private GenericRepository<Language> _languagessRepository;
 		private GenericRepository<Series> _seriesRepository;
 		private GenericRepository<Genre> _genresRepository;
+		private GenericRepository<FileFormat> _fileFormatsRepository;
 
-		public GenericRepository<Book> BooksRepository
-		{
-			get
-			{
+		public GenericRepository<Book> BooksRepository => _booksRepository ?? (_booksRepository = new GenericRepository<Book>(context));
 
-				if (_booksRepository == null)
-				{
-					_booksRepository = new GenericRepository<Book>(context);
-				}
-				return _booksRepository;
-			}
-		}
+		public GenericRepository<Country> CountriesRepository => _countriesRepository ?? (_countriesRepository = new GenericRepository<Country>(context));
 
-		public GenericRepository<Country> CountriesRepository
-		{
-			get
-			{
+		public GenericRepository<Language> LanguagesRepository => _languagessRepository ?? (_languagessRepository = new GenericRepository<Language>(context));
 
-				if (_countriesRepository == null)
-				{
-					_countriesRepository = new GenericRepository<Country>(context);
-				}
-				return _countriesRepository;
-			}
-		}
+		public GenericRepository<Series> SeriesRepository => _seriesRepository ?? (_seriesRepository = new GenericRepository<Series>(context));
 
-		public GenericRepository<Language> LanguagesRepository
-		{
-			get
-			{
+		public GenericRepository<Tag> TagsRepository => _tagsRepository ?? (_tagsRepository = new GenericRepository<Tag>(context));
 
-				if (_languagessRepository == null)
-				{
-					_languagessRepository = new GenericRepository<Language>(context);
-				}
-				return _languagessRepository;
-			}
-		}
+		public GenericRepository<Genre> GenresRepository => _genresRepository ?? (_genresRepository = new GenericRepository<Genre>(context));
 
-		public GenericRepository<Series> SeriesRepository
-		{
-			get
-			{
-
-				if (_seriesRepository == null)
-				{
-					_seriesRepository = new GenericRepository<Series>(context);
-				}
-				return _seriesRepository;
-			}
-		}
-
-		public GenericRepository<Tag> TagsRepository
-		{
-			get
-			{
-
-				if (_tagsRepository == null)
-				{
-					_tagsRepository = new GenericRepository<Tag>(context);
-				}
-				return _tagsRepository;
-			}
-		}
-
-		public GenericRepository<Genre> GenresRepository
-		{
-			get
-			{
-
-				if (_genresRepository == null)
-				{
-					_genresRepository = new GenericRepository<Genre>(context);
-				}
-				return _genresRepository;
-			}
-		}
+		public GenericRepository<FileFormat> FileformatsRepository => _fileFormatsRepository ?? (_fileFormatsRepository = new GenericRepository<FileFormat>(context));
 
 		public void Save()
 		{

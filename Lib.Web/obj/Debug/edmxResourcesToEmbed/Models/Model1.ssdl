@@ -24,8 +24,8 @@
       <PropertyRef Name="ISBN" />
     </Key>
     <Property Name="ISBN" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="255" Nullable="false" />
-    <Property Name="Annotation" Type="varchar(max)" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Annotation" Type="nvarchar" MaxLength="1000" />
     <Property Name="Rating" Type="smallint" />
     <Property Name="SeriesId" Type="uniqueidentifier" />
     <Property Name="PagesNumber" Type="smallint" />
@@ -42,6 +42,14 @@
     </Key>
     <Property Name="Authors_Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="Books_ISBN" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BooksFileFormats">
+    <Key>
+      <PropertyRef Name="BookId" />
+      <PropertyRef Name="FileFormatId" />
+    </Key>
+    <Property Name="BookId" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="FileFormatId" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="BooksGenres">
     <Key>
@@ -81,6 +89,13 @@
     </Key>
     <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
     <Property Name="Name" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FileFormats">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="10" Nullable="false" />
   </EntityType>
   <EntityType Name="Genres">
     <Key>
@@ -183,6 +198,18 @@
       </Principal>
       <Dependent Role="AuthorsGenres">
         <PropertyRef Name="Genres_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Book">
+    <End Role="Books" Type="Self.Books" Multiplicity="1" />
+    <End Role="BooksFileFormats" Type="Self.BooksFileFormats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Books">
+        <PropertyRef Name="ISBN" />
+      </Principal>
+      <Dependent Role="BooksFileFormats">
+        <PropertyRef Name="BookId" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -306,16 +333,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_FileFormat">
+    <End Role="FileFormats" Type="Self.FileFormats" Multiplicity="1" />
+    <End Role="BooksFileFormats" Type="Self.BooksFileFormats" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FileFormats">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BooksFileFormats">
+        <PropertyRef Name="FileFormatId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="ModelsStoreContainer">
     <EntitySet Name="Authors" EntityType="Self.Authors" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AuthorsGenres" EntityType="Self.AuthorsGenres" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Books" EntityType="Self.Books" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BooksAuthors" EntityType="Self.BooksAuthors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BooksFileFormats" EntityType="Self.BooksFileFormats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BooksGenres" EntityType="Self.BooksGenres" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BooksInterpreters" EntityType="Self.BooksInterpreters" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BooksPublishers" EntityType="Self.BooksPublishers" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="BooksTags" EntityType="Self.BooksTags" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Countries" EntityType="Self.Countries" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FileFormats" EntityType="Self.FileFormats" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Genres" EntityType="Self.Genres" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Interpreters" EntityType="Self.Interpreters" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Languages" EntityType="Self.Languages" Schema="dbo" store:Type="Tables" />
@@ -341,6 +382,10 @@
     <AssociationSet Name="FK_AuthorsGenres_Genres" Association="Self.FK_AuthorsGenres_Genres">
       <End Role="Genres" EntitySet="Genres" />
       <End Role="AuthorsGenres" EntitySet="AuthorsGenres" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Book" Association="Self.FK_Book">
+      <End Role="Books" EntitySet="Books" />
+      <End Role="BooksFileFormats" EntitySet="BooksFileFormats" />
     </AssociationSet>
     <AssociationSet Name="FK_BooksAuthors_Authors" Association="Self.FK_BooksAuthors_Authors">
       <End Role="Authors" EntitySet="Authors" />
@@ -381,6 +426,10 @@
     <AssociationSet Name="FK_BooksTags_Tags" Association="Self.FK_BooksTags_Tags">
       <End Role="Tags" EntitySet="Tags" />
       <End Role="BooksTags" EntitySet="BooksTags" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FileFormat" Association="Self.FK_FileFormat">
+      <End Role="FileFormats" EntitySet="FileFormats" />
+      <End Role="BooksFileFormats" EntitySet="BooksFileFormats" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

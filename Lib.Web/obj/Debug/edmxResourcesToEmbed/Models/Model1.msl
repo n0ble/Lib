@@ -136,5 +136,21 @@
         <ScalarProperty Name="Id" ColumnName="Tags_Id" />
       </EndProperty>
     </AssociationSetMapping>
+    <EntitySetMapping Name="FileFormats">
+      <EntityTypeMapping TypeName="Models.FileFormat">
+        <MappingFragment StoreEntitySet="FileFormats">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="BooksFileFormats" TypeName="Models.BooksFileFormats" StoreEntitySet="BooksFileFormats">
+      <EndProperty Name="FileFormat">
+        <ScalarProperty Name="Id" ColumnName="FileFormatId" />
+      </EndProperty>
+      <EndProperty Name="Book">
+        <ScalarProperty Name="ISBN" ColumnName="BookId" />
+      </EndProperty>
+    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

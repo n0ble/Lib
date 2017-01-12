@@ -1,4 +1,5 @@
-﻿@model Lib.Web.Models.Book
+﻿@using Lib.Web.Models
+@model Lib.Web.Models.Book
 
 @{
     ViewBag.Title = "Details";
@@ -10,8 +11,8 @@
 
 <div class="panel">
     <h4>
-		@Html.DisplayFor(model => model.Name)
-	</h4>
+        @Html.DisplayFor(model => model.Name)
+    </h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -22,13 +23,13 @@
             @Html.DisplayFor(model => model.Name)
         </dd>
 
-		<dt>
-			@Html.DisplayNameFor(model => model.Authors)
-		</dt>
+        <dt>
+            @Html.DisplayNameFor(model => model.Authors)
+        </dt>
 
-		<dd>
-			@Html.DisplayFor(model => model.Name)
-		</dd>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
 
         <dt>
             @Html.DisplayNameFor(model => model.Annotation)
@@ -105,6 +106,37 @@
     </dl>
 </div>
 <div>
-	@Html.ActionLink("Edit", "Edit", new { id = Model.ISBN }, new { @class="btn btn-primary"})
-	@Html.ActionLink("Back to List", "Index", null, new { @class="btn btn-default fa fa-plus"})
+    Download 
+    @foreach (var ff in ViewBag.ExistingfileFormats)
+    {
+        var format = ((FileFormat) ff).Name;
+
+
+        @Html.ActionLink(format, "DownloadFile", new { id = Model.ISBN+ '.' + format },new {style ="margin-right: 10px;"})
+    }
 </div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ISBN }, new { @class="btn btn-primary"})
+    @Html.ActionLink("Back to List", "Index", null, new { @class="btn btn-default fa fa-plus"})
+</div>
+
+<script>
+    $(function () {
+        $("#DownloadFile").click(function () {
+                $.ajax(
+                {
+                    url: '@Url.Action("DownloadFile", "Books")',
+                    contentType: 'application/json; charset=utf-8',
+                    datatype: 'json',
+                    data: {
+                        id: $("#DownloadFile").attr("id")
+            },
+                type: "GET",
+                success: function () {
+                    alert("success");
+                }
+            });
+
+        });
+    });
+</script>

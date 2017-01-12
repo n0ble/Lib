@@ -22,6 +22,7 @@ namespace Lib.Web.Models
             this.Interpreters = new HashSet<Interpreter>();
             this.Publishers = new HashSet<Publisher>();
             this.Tags = new HashSet<Tag>();
+            this.FileFormats = new HashSet<FileFormat>();
         }
     
         public string ISBN { get; set; }
@@ -49,5 +50,7 @@ namespace Lib.Web.Models
         public virtual ICollection<Publisher> Publishers { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tag> Tags { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<FileFormat> FileFormats { get; set; }
     }
 }

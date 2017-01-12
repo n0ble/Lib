@@ -194,6 +194,7 @@
     <Compile Include="Controllers\AuthorsController.cs" />
     <Compile Include="Controllers\BooksController.cs" />
     <Compile Include="Controllers\CountriesController.cs" />
+    <Compile Include="Controllers\FileFormatsController.cs" />
     <Compile Include="Controllers\GenresController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InterpretersController.cs" />
@@ -216,6 +217,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Country.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FileFormat.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Genre.cs">
@@ -466,6 +470,11 @@
     <Content Include="Views\Books\Index.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Nav\Menu.cshtml" />
+    <Content Include="Views\FileFormats\Create.cshtml" />
+    <Content Include="Views\FileFormats\Delete.cshtml" />
+    <Content Include="Views\FileFormats\Details.cshtml" />
+    <Content Include="Views\FileFormats\Edit.cshtml" />
+    <Content Include="Views\FileFormats\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\Uploads\" />

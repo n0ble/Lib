@@ -8,8 +8,10 @@ namespace Lib.Web.Controllers
     {
 		private UnitOfWork _unitOfWork = new UnitOfWork();
 
-		public PartialViewResult Menu()
+		public PartialViewResult Menu(string genre = null)
 		{
+			ViewBag.SelectedGenre = genre;
+
 			var genres = _unitOfWork.GenresRepository
 				.Get()
 				.OrderBy(g => g.Name)

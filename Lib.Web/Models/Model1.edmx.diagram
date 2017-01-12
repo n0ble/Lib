@@ -23,6 +23,8 @@
         <AssociationConnector Association="Models.BooksInterpreters" ManuallyRouted="false" />
         <AssociationConnector Association="Models.BooksPublishers" ManuallyRouted="false" />
         <AssociationConnector Association="Models.BooksTags" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Models.FileFormat" Width="1.5" PointX="5.25" PointY="13.125" />
+        <AssociationConnector Association="Models.BooksFileFormats" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
