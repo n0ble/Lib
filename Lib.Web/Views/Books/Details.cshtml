@@ -1,36 +1,15 @@
 ﻿@using Lib.Web.Models
-@model Lib.Web.Models.Book
+@model Book
 
 @{
     ViewBag.Title = "Details";
 }
-
-<script>
-
-</script>
-
-<div class="panel">
-    <h4>
-        @Html.DisplayFor(model => model.Name)
-    </h4>
-    <hr />
-
-</div>
 <div>
-    Download
-    @foreach (var ff in ViewBag.ExistingfileFormats)
-    {
-        var format = ((FileFormat)ff).Name;
-
-
-        @Html.ActionLink(format, "DownloadFile", new { id = Model.ISBN + '.' + format }, new { style = "margin-right: 10px;" })
-    }
+    <ol class="breadcrumb">
+        <li>@Html.ActionLink("Home","Index")</li>
+        <li class="active">@Model.Name Details</li>
+    </ol>
 </div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ISBN }, new { @class = "btn btn-primary" })
-    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default fa fa-plus" })
-</div>
-
 
 <div class="col-lg-6">
     <div class="panel panel-default">
@@ -41,26 +20,27 @@
         <div class="panel-body">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs">
-                <li class="">
-                    <a href="#home" data-toggle="tab" aria-expanded="false">Details</a>
-                </li>
-                <li class="">
-                    <a href="#profile" data-toggle="tab" aria-expanded="false">Profile</a>
-                </li>
-                <li class="">
-                    <a href="#messages" data-toggle="tab" aria-expanded="false">Messages</a>
-                </li>
                 <li class="active">
-                    <a href="#settings" data-toggle="tab" aria-expanded="true">Download</a>
+                    <a href="#home" data-toggle="tab" aria-expanded="true">Details</a>
+                </li>
+                <li class="">
+                    <a href="#profile" data-toggle="tab" aria-expanded="false">About author</a>
+                </li>
+                <li class="">
+                    <a href="#messages" data-toggle="tab" aria-expanded="false">Comments</a>
+                </li>
+                <li class="">
+                    <a href="#settings" data-toggle="tab" aria-expanded="false">Download</a>
                 </li>
             </ul>
 
             <!-- Tab panes -->
             <div class="tab-content">
-                <div class="tab-pane fade" id="home">
+                <div class="tab-pane fade active in" id="home">
                     <h4>Details</h4>
+
                     <dl class="dl-horizontal">
-                        <dt>
+                        <dt class="prop-title">
                             @Html.DisplayNameFor(model => model.Name)
                         </dt>
 
@@ -68,15 +48,15 @@
                             @Html.DisplayFor(model => model.Name)
                         </dd>
 
-                        <dt>
+                        <dt class="prop-title">
                             @Html.DisplayNameFor(model => model.Authors)
                         </dt>
 
                         <dd>
-                            @Html.DisplayFor(model => model.Name)
+                            @Html.DisplayFor(model => model.Authors)
                         </dd>
 
-                        <dt>
+                        <dt class="prop-title">
                             @Html.DisplayNameFor(model => model.Annotation)
                         </dt>
 
@@ -84,7 +64,7 @@
                             @Html.DisplayFor(model => model.Annotation)
                         </dd>
 
-                        <dt>
+                        <dt class="prop-title">
                             @Html.DisplayNameFor(model => model.Rating)
                         </dt>
 
@@ -92,7 +72,7 @@
                             @Html.DisplayFor(model => model.Rating)
                         </dd>
 
-                        <dt>
+                        <dt class="prop-title">
                             @Html.DisplayNameFor(model => model.PagesNumber)
                         </dt>
 
@@ -100,7 +80,7 @@
                             @Html.DisplayFor(model => model.PagesNumber)
                         </dd>
 
-                        <dt>
+                        <dt class="prop-title">
                             @Html.DisplayNameFor(model => model.PublishedOn)
                         </dt>
 
@@ -108,7 +88,7 @@
                             @Html.DisplayFor(model => model.PublishedOn)
                         </dd>
 
-                        <dt>
+                        <dt class="prop-title">
                             @Html.DisplayNameFor(model => model.TranslatedOn)
                         </dt>
 
@@ -116,7 +96,7 @@
                             @Html.DisplayFor(model => model.TranslatedOn)
                         </dd>
 
-                        <dt>
+                        <dt class="prop-title">
                             @Html.DisplayNameFor(model => model.ReleasedOn)
                         </dt>
 
@@ -124,7 +104,7 @@
                             @Html.DisplayFor(model => model.ReleasedOn)
                         </dd>
 
-                        <dt>
+                        <dt class="prop-title">
                             @Html.DisplayNameFor(model => model.Country)
                         </dt>
 
@@ -132,7 +112,7 @@
                             @Html.DisplayFor(model => model.Country.Name)
                         </dd>
 
-                        <dt>
+                        <dt class="prop-title">
                             @Html.DisplayNameFor(model => model.Language)
                         </dt>
 
@@ -140,7 +120,7 @@
                             @Html.DisplayFor(model => model.Language.Name)
                         </dd>
 
-                        <dt>
+                        <dt class="prop-title">
                             @Html.DisplayNameFor(model => model.Series)
                         </dt>
 
@@ -152,14 +132,12 @@
 
                 </div>
                 <div class="tab-pane fade" id="profile">
-                    <h4>Profile Tab</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
                 <div class="tab-pane fade" id="messages">
-                    <h4>Messages Tab</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
-                <div class="tab-pane fade active in" id="settings">
+                <div class="tab-pane fade" id="settings">
                     <h4>Choose Format</h4>
                     <p>
                         @foreach (var ff in ViewBag.ExistingfileFormats)
@@ -177,7 +155,10 @@
     </div>
     <!-- /.panel -->
 </div>
-
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ISBN }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default fa fa-plus" })
+</div>
 <script>
     $(function () {
         $("#DownloadFile").click(function () {
